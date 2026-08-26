@@ -1,0 +1,8 @@
+Parameter,Baseline (100% gas),Retrofit (heat pump + gas top-up)
+Heating COP,7.06,
+Reboiler coverage by heat pump,76.0 %,
+,,
+Annual gas consumption,2445 MWh/yr,587 MWh/yr
+Annual electricity consumption,0 MWh/yr,232 MWh/yr
+Annual energy cost,"171,169 EUR/yr","80,946 EUR/yr"
+Annual CO2 emissions,491 t/yr,198 t/yr

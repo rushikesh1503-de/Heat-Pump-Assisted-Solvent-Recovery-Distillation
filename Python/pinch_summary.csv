@@ -1,0 +1,19 @@
+Parameter,Value
+Hot stream (condenser) temperature,78.48 C
+Hot stream (condenser) duty,175.44 kW
+Cold stream (reboiler) temperature,98.94 C
+Cold stream (reboiler) duty,268.98 kW
+,
+Baseline min. hot utility (no HP),268.98 kW
+Baseline min. cold utility (no HP),175.44 kW
+,
+Heat pump evaporator temperature,70.00 C
+Heat pump condenser temperature,103.94 C
+Approach temp. (evaporator side),8.48 K
+Approach temp. (condenser side),5.00 K
+Heat pump evaporator duty,175.44 kW
+Heat pump condenser duty,204.42 kW
+Compressor work,28.97 kW
+Heating COP,7.06
+Reboiler coverage by heat pump,76.0 %
+Residual (auxiliary) heating needed,64.56 kW
