@@ -32,6 +32,12 @@ The objective is to reduce external energy demand by recovering heat from the di
 - `techno_economic.py`  
   Python based techno economic analysis.
 
+- `capex_payback.py`  
+  Python script for CAPEX estimation and payback period calculation.
+
+- `sensitivity_analysis.py`  
+  Python script for sensitivity analysis.
+
 ## Objective
 
 The main objective is to investigate how heat pump integration can reduce external heating requirements and improve the energy efficiency of solvent recovery distillation.
