@@ -62,7 +62,7 @@ See `composite_curves.png` for the visual composite curve, including the heat pu
 
 **Cycle:** Evaporator → Compressor → Condenser → Expansion valve → Evaporator (standard mechanical vapor-compression cycle).
 
-### Assumed design choices (explicitly stated)
+### Assumed design choices 
 
 | Parameter | Value | Basis |
 |---|---|---|
@@ -109,19 +109,42 @@ See `composite_curves.png` for the visual composite curve, including the heat pu
 | Metric | Baseline | Retrofit | Change |
 |---|---|---|---|
 | Annual gas consumption | 2445 MWh/yr | 587 MWh/yr | −76% |
-| Annual electricity consumption | 0 MWh/yr | 232 MWh/yr | — |
+| Annual electricity consumption | 0 MWh/yr | 232 MWh/yr | + |
 | **Annual energy cost** | **€171,169/yr** | **€80,946/yr** | **−€90,223/yr (−52.7%)** |
 | **Annual CO2 emissions** | **491 t/yr** | **198 t/yr** | **−294 t/yr (−59.8%)** |
 
 **Notable finding:** cost savings (52.7%) exceed the heat pump's coverage of reboiler duty (76%, in energy terms — note this is *not* directly comparable to the cost % without accounting for COP). This is because, per unit of *delivered heat*, the heat pump is substantially cheaper than gas: electricity at 17.2 ct/kWh delivered through a COP of ~7.06 costs approximately 2.4 ct per kWh of heat, versus gas at 7.0 ct/kWh through an 88% efficient boiler costing approximately 8.0 ct per kWh of heat — roughly a 3x cost advantage per unit of heat delivered.
 
 ---
-
-## 6. Not Yet Completed
-
-- **CAPEX and payback**: cost estimate for the compressor and two heat exchangers, installation factor, and simple payback period.
+## 6. Techno-Economic Analysis — CAPEX and Payback
+ 
+**Tool:** Python — see `capex_payback.py`.
+ 
+Vendor quotes were not available, so CAPEX is estimated from published industrial high-temperature heat pump cost literature and presented as a **Low/Base/High range**, not a single number — the literature itself reports specific investment costs varying by roughly 5x depending on scale, temperature, and scope (200–1500 EUR/kW across all HTHP technologies; 300–900 EUR/kW_thermal bare equipment specifically for heat delivery up to 160°C, per Blue Terra 2008 as reviewed by energy.nl). An installation factor (2.0–3.0x bare equipment cost) is applied to account for labor, piping, controls, and engineering, consistent with the literature noting installed cost runs "several times" bare equipment cost.
+ 
+| Case | Specific cost | Installation factor | Total installed CAPEX | Simple payback | NPV (8%, 15 yr) |
+|---|---|---|---|---|---|
+| Low | 300 EUR/kWth | 2.0x | €122,652 | 1.4 years | €649,610 |
+| **Base** | **500 EUR/kWth** | **2.5x** | **€255,525** | **2.8 years** | **€516,737** |
+| High | 900 EUR/kWth | 3.0x | €551,934 | 6.1 years | €220,328 |
+ 
+**Conclusion:** even in the pessimistic (High) cost case, payback (6.1 years) sits close to a typical 5-year industrial investment hurdle, and the base case (2.8 years) is comfortably attractive. NPV is positive in all three cases over a 15-year service life at an 8% discount rate — the retrofit is a defensible investment across the full range of realistic cost uncertainty, not just in an optimistic scenario.
+ 
+## 7. Not Yet Completed
+ 
 - **Sensitivity analysis**: electricity price, gas price, and CAPEX uncertainty ranges, plus a DWSIM-based sensitivity sweep on compressor efficiency and condensing temperature vs. COP.
 - **Full-electrification comparison scenario**: cost/CO2 case if the residual 64.56 kW were supplied by direct electric resistance heating instead of gas.
 - **Detailed heat exchanger sizing**: UA/area for the evaporator and condenser (currently modeled as ideal Heater/Cooler blocks).
+- **Final PFD** (before/after) and written technical report.
+- **GitHub packaging** of all DWSIM files, Python scripts, plots, and documentation.
 ---
+ 
+## 8. Files Produced So Far
+ 
+| File | Description |
+|---|---|
+| `Heat-Pump-Assisted_Solvent_Recovery_Distillation.dwxmz` | DWSIM flowsheet (distillation column + heat pump cycle) |
+| `pinch_analysis.py`, `pinch_summary.csv`, `composite_curves.png` | Pinch / heat integration analysis |
+| `techno_economic.py`, `techno_economic_baseline_vs_retrofit.csv`, `baseline_vs_retrofit.png` | OPEX and CO2 techno-economic comparison |
+| `capex_payback.py`, `capex_payback.csv`, `capex_payback.png` | CAPEX and payback (Low/Base/High literature-cost range), with NPV |
 
