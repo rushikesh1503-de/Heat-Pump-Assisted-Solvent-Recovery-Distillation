@@ -11,8 +11,8 @@
 | 2. Baseline distillation model (DWSIM) | Complete |
 | 3. Pinch / heat integration analysis (Python) | Complete |
 | 4. Heat pump design and simulation (DWSIM) | Complete |
-| 5. Techno-economic analysis — OPEX & CO2 (Python) | Complete |
-| 5b. Techno-economic analysis — CAPEX & payback (Python) | Not yet completed |
+| 5. Techno-economic analysis - OPEX & CO2 (Python) | Complete |
+| 5b. Techno-economic analysis - CAPEX & payback (Python) | Not yet completed |
 
 ---
 
@@ -44,11 +44,11 @@
 
 ## 3. Pinch / Heat Integration Analysis
 
-**Tool:** Python (pandas, matplotlib) — see `pinch_analysis.py`.
+**Tool:** Python (pandas, matplotlib) - see `pinch_analysis.py`.
 
 The column reduces to a two-stream heat integration problem: a hot stream (condenser, 175.44 kW available at 78.48°C) and a cold stream (reboiler, 268.98 kW required at 98.94°C), both isothermal phase changes.
 
-**Key finding:** the hot stream is at a *lower* temperature (78.48°C) than the cold stream requires (98.94°C) — a 20.5 K gap. Since heat cannot flow against a temperature gradient, **direct heat recovery is thermodynamically impossible**, which is the formal justification for the heat pump concept.
+**Key finding:** the hot stream is at a *lower* temperature (78.48°C) than the cold stream requires (98.94°C) - a 20.5 K gap. Since heat cannot flow against a temperature gradient, **direct heat recovery is thermodynamically impossible**, which is the formal justification for the heat pump concept.
 
 **Baseline utility targets (no heat pump):** minimum hot utility = 268.98 kW (full reboiler duty from an external source), minimum cold utility = 175.44 kW (full condenser duty rejected to cooling water).
 
@@ -89,9 +89,9 @@ See `composite_curves.png` for the visual composite curve, including the heat pu
 
 ---
 
-## 5. Techno-Economic Analysis — Energy Cost and CO2 (OPEX)
+## 5. Techno-Economic Analysis - Energy Cost and CO2 (OPEX)
 
-**Tool:** Python — see `techno_economic.py`.
+**Tool:** Python - see `techno_economic.py`.
 
 ### Operating and pricing assumptions (explicitly stated, sourced)
 
@@ -113,14 +113,14 @@ See `composite_curves.png` for the visual composite curve, including the heat pu
 | **Annual energy cost** | **€171,169/yr** | **€80,946/yr** | **−€90,223/yr (−52.7%)** |
 | **Annual CO2 emissions** | **491 t/yr** | **198 t/yr** | **−294 t/yr (−59.8%)** |
 
-**Notable finding:** cost savings (52.7%) exceed the heat pump's coverage of reboiler duty (76%, in energy terms — note this is *not* directly comparable to the cost % without accounting for COP). This is because, per unit of *delivered heat*, the heat pump is substantially cheaper than gas: electricity at 17.2 ct/kWh delivered through a COP of ~7.06 costs approximately 2.4 ct per kWh of heat, versus gas at 7.0 ct/kWh through an 88% efficient boiler costing approximately 8.0 ct per kWh of heat — roughly a 3x cost advantage per unit of heat delivered.
+**Notable finding:** cost savings (52.7%) exceed the heat pump's coverage of reboiler duty (76%, in energy terms - note this is *not* directly comparable to the cost % without accounting for COP). This is because, per unit of *delivered heat*, the heat pump is substantially cheaper than gas: electricity at 17.2 ct/kWh delivered through a COP of ~7.06 costs approximately 2.4 ct per kWh of heat, versus gas at 7.0 ct/kWh through an 88% efficient boiler costing approximately 8.0 ct per kWh of heat - roughly a 3x cost advantage per unit of heat delivered.
 
 ---
-## 6. Techno-Economic Analysis — CAPEX and Payback
+## 6. Techno-Economic Analysis - CAPEX and Payback
  
-**Tool:** Python — see `capex_payback.py`.
+**Tool:** Python - see `capex_payback.py`.
  
-Vendor quotes were not available, so CAPEX is estimated from published industrial high-temperature heat pump cost literature and presented as a **Low/Base/High range**, not a single number — the literature itself reports specific investment costs varying by roughly 5x depending on scale, temperature, and scope (200–1500 EUR/kW across all HTHP technologies; 300–900 EUR/kW_thermal bare equipment specifically for heat delivery up to 160°C, per Blue Terra 2008 as reviewed by energy.nl). An installation factor (2.0–3.0x bare equipment cost) is applied to account for labor, piping, controls, and engineering, consistent with the literature noting installed cost runs "several times" bare equipment cost.
+Vendor quotes were not available, so CAPEX is estimated from published industrial high-temperature heat pump cost literature and presented as a **Low/Base/High range**, not a single number - the literature itself reports specific investment costs varying by roughly 5x depending on scale, temperature, and scope (200–1500 EUR/kW across all HTHP technologies; 300–900 EUR/kW_thermal bare equipment specifically for heat delivery up to 160°C, per Blue Terra 2008 as reviewed by energy.nl). An installation factor (2.0–3.0x bare equipment cost) is applied to account for labor, piping, controls, and engineering, consistent with the literature noting installed cost runs "several times" bare equipment cost.
  
 | Case | Specific cost | Installation factor | Total installed CAPEX | Simple payback | NPV (8%, 15 yr) |
 |---|---|---|---|---|---|
@@ -128,7 +128,7 @@ Vendor quotes were not available, so CAPEX is estimated from published industria
 | **Base** | **500 EUR/kWth** | **2.5x** | **€255,525** | **2.8 years** | **€516,737** |
 | High | 900 EUR/kWth | 3.0x | €551,934 | 6.1 years | €220,328 |
  
-**Conclusion:** even in the pessimistic (High) cost case, payback (6.1 years) sits close to a typical 5-year industrial investment hurdle, and the base case (2.8 years) is comfortably attractive. NPV is positive in all three cases over a 15-year service life at an 8% discount rate — the retrofit is a defensible investment across the full range of realistic cost uncertainty, not just in an optimistic scenario.
+**Conclusion:** even in the pessimistic (High) cost case, payback (6.1 years) sits close to a typical 5-year industrial investment hurdle, and the base case (2.8 years) is comfortably attractive. NPV is positive in all three cases over a 15-year service life at an 8% discount rate - the retrofit is a defensible investment across the full range of realistic cost uncertainty, not just in an optimistic scenario.
  
 ## 7. Not Yet Completed
  
