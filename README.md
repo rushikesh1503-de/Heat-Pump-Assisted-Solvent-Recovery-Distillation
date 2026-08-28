@@ -20,7 +20,7 @@ Built as a portfolio project demonstrating end-to-end chemical process engineeri
 | Simple payback (base case) | 2.8 years |
 | Payback range (literature CAPEX uncertainty) | 1.4 - 6.1 years |
 
-![Retrofit png](docs/HP_Distillation.png)
+! Retrofit png: (HP_Distillation.png)
 
 ---
 
@@ -28,7 +28,7 @@ Built as a portfolio project demonstrating end-to-end chemical process engineeri
 
 Industrial process heat decarbonization is one of the most active investment areas in German industry right now. High-temperature heat pumps have matured to commercial readiness in exactly the 100-160 degC range this project targets, and rising EU ETS carbon prices keep strengthening the economic case. Solvent recovery distillation is a generic unit operation found across specialty chemicals, pharma, coatings, and food processing, so the approach here generalizes well beyond a single sector.
 
-Full motivation and scope: [`docs/01_Project_Overview.md`](docs/01_Project_Overview.md)
+Full motivation and scope: (01_Project_Overview.md)
 
 ---
 
@@ -39,7 +39,7 @@ Full motivation and scope: [`docs/01_Project_Overview.md`](docs/01_Project_Overv
 3. **Heat pump design** (DWSIM, CoolProp, R1233zd(E)) - full vapor-compression cycle, solved for the refrigerant flow rate that matches available waste heat.
 4. **Techno-economic analysis** (Python) - OPEX, CO2, CAPEX (literature-based range), payback, NPV, and sensitivity analysis.
 
-Full methodology and all intermediate results: [`docs/02_Methodology_and_Results.md`](docs/02_Methodology_and_Results.md)
+Full methodology and all intermediate results: (02_Methodology_and_Results.md)
 
 ---
 
@@ -50,6 +50,6 @@ Full methodology and all intermediate results: [`docs/02_Methodology_and_Results
 
 ## Assumptions and Limitations
 
-All economic and design assumptions (temperature approaches, compressor efficiency, energy prices, CO2 factors, CAPEX basis) are explicitly stated and sourced in [`docs/02_Methodology_and_Results.md`](docs/02_Methodology_and_Results.md). Known limitations: heat exchangers modeled as ideal duty blocks rather than sized equipment; CAPEX is a literature-based range rather than a vendor quote.
+All economic and design assumptions (temperature approaches, compressor efficiency, energy prices, CO2 factors, CAPEX basis) are explicitly stated and sourced in (02_Methodology_and_Results.md). Known limitations: heat exchangers modeled as ideal duty blocks rather than sized equipment; CAPEX is a literature-based range rather than a vendor quote.
 
 ---
