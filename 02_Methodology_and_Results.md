@@ -298,13 +298,13 @@ was selected.
 
 Therefore:
 
-\[
+$$
 \Delta T_{evap}=78.48-70
-\]
+$$
 
-\[
+$$
 \Delta T_{evap}=8.48\;K
-\]
+$$
 
 This temperature difference represents the assumed driving force between the distillation condenser heat source and the heat pump evaporator.
 
