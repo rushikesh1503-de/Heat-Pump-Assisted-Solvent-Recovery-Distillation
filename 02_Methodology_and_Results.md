@@ -324,13 +324,13 @@ was selected.
 
 Therefore:
 
-\[
+$$
 \Delta T_{cond}=103.94-98.94
-\]
+$$
 
-\[
+$$
 \Delta T_{cond}=5.00\;K
-\]
+$$
 
 This provides the temperature driving force required to transfer heat from the heat pump condenser to the reboiler.
 
@@ -349,9 +349,9 @@ The selected refrigerant temperatures correspond to approximately:
 
 The pressure ratio of the compressor is approximately:
 
-\[
+$$
 \frac{1136.57}{511.96}\approx2.22
-\]
+$$
 
 Pressure losses in the heat exchangers, piping and fittings are neglected in this conceptual model.
 
@@ -390,19 +390,18 @@ The available heat from the distillation condenser was used as the target evapor
 
 The calculation follows:
 
-\[
+$$
 Q_{evap}=
 \dot m_{ref}(h_{out}-h_{in})
-\]
+$$
 
 Therefore:
 
-\[
-\dot m_{ref}
-=
+$$
+\dot m_{ref} =
 \frac{Q_{evap}}
 {h_{out}-h_{in}}
-\]
+$$
 
 In DWSIM, the refrigerant mass flow was adjusted iteratively until the heat absorbed by the evaporator approximately matched the available condenser heat.
 
@@ -458,36 +457,36 @@ The heat pump condenser is therefore the high temperature heat source for the re
 
 The baseline reboiler requires approximately:
 
-\[
+$$
 Q_{reboiler}=268.98\;kW
-\]
+$$
 
 The heat pump supplies approximately:
 
-\[
+$$
 Q_{HP}=204.42\;kW
-\]
+$$
 
 Therefore the remaining duty is:
 
-\[
+$$
 Q_{aux}=268.98-204.42
-\]
+$$
 
-\[
+$$
 Q_{aux}\approx64.56\;kW
-\]
+$$
 
 The heat pump coverage is:
 
-\[
+$$
 Coverage=
 \frac{204.42}{268.98}\times100
-\]
+$$
 
-\[
+$$
 Coverage\approx76\%
-\]
+$$
 
 Thus the conceptual retrofit is a **hybrid heating system**:
 
@@ -502,34 +501,31 @@ This is not a modelling failure. It results from the fact that the available con
 
 The heating coefficient of performance is calculated as:
 
-\[
-COP_{heating}
-=
+$$
+COP_{heating}=
 \frac{Q_{cond}}{W_{comp}}
-\]
+$$
 
 Using the DWSIM results:
 
-\[
-COP_{heating}
-=
+$$
+COP_{heating}=
 \frac{204.42}{28.97}
-\]
+$$
 
-\[
+$$
 COP_{heating}\approx7.06
-\]
+$$
 
 The COP is a calculated result of the conceptual heat pump model.
 
 For comparison, the ideal Carnot heating COP between the selected temperature levels is:
 
-\[
-COP_{Carnot}
-=
+$$
+COP_{Carnot}=
 \frac{T_{cond}}
 {T_{cond}-T_{evap}}
-\]
+$$
 
 using absolute temperature in kelvin.
 
